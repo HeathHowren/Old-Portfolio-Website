@@ -7,9 +7,10 @@ $("#inp").on("keyup", function (event) {
     var splitted = inputtxt.split(" ");
 
     switch (splitted[0]) {
+      case "help":
       case "cmds":
         statement =
-          "cmds: list all commands.\r\nping (host/url): check if server is online.\r\nprint (text): prints your message.\r\nclear: clears the debug console.";
+          "commands: list all commands.\r\nping (host/url): check if server is online.\r\nprint (text): prints your message.\r\nclear: clears the debug console.";
         break;
 
       case "ping":
@@ -68,6 +69,7 @@ $("#inp").on("keyup", function (event) {
     ).scrollHeight;
   }
 });
+
 
 function ping(url) {
   var resp = "";
